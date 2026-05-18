@@ -43,7 +43,18 @@ sql = Route(
     ]
 )
 
-router = SemanticRouter(routes=[faq, sql], encoder=encoder, auto_sync="local",)
+small_talk = Route(
+    name='small_talk',
+    utterances=[
+        "How are you?",
+        "What is your name?",
+        "Tell me a joke.",
+        "What's the weather like today?",
+        "Do you have any hobbies?"
+    ]
+)
+
+router = SemanticRouter(routes=[faq, sql, small_talk], encoder=encoder, auto_sync="local",)
 
 if __name__ == "__main__":
     print(router("What is your policy on defective product?"))
