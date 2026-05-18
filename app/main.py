@@ -3,7 +3,7 @@ from faq import ingest_faq_data, faq_chain
 from sql import sql_chain
 from pathlib import Path
 from router import router
-from small_talk import small_talk_chain
+from smalltalk import small_talk_chain
 
 faqs_path = Path(__file__).parent / "resources/faq_data.csv"
 ingest_faq_data(faqs_path)
